@@ -7,7 +7,7 @@ before_install:
   - git clone https://github.com/LinuxAdeptLtd/Docker-Terraform.git ${TERRAFORM_BUILD}
   - docker build -t terraform -f ${TERRAFORM_BUILD}/Dockerfile .
   - ls -alh
-  - docker run -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v terraform:/data terraform init
-  - docker run -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v terraform:/data terraform workspace select production
+  - docker run -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform/:/data terraform init
+  - docker run -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform/:/data terraform workspace select production
 script:
-  - docker run -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v terraform:/data terraform apply -auto-approve -refresh=true -var-file production.tfvars
+  - docker run -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform/:/data terraform apply -auto-approve -refresh=true -var-file production.tfvars
