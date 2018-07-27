@@ -5,10 +5,10 @@ env:
     - secure: QAdW/aciq0mJXuJuVeZqBvUCRAR7cK9oeZ8C5SVQkxESsnzvCC7o5cX0+TjYyKFH2fVAm5eD6F1kv7uOm9HCP534hTpSPkXVaysdA9v4BV5E47Wt6zkPWhCwaNPcKA48vCnM9XK0DHbE5tV43VB4ZpDzg17AUy7sAkEtuzMQBz+g3ZzqGML/jfh8OncJ3mJdRa6wEDjwiDcqGwBC0VG7X3WDzJSXCKE01VFpAq5KBnLQiWbGLRx0bTYzGpXNSXBQ9xh78VHjiT0ufS8Xm+EO8u1hHY2qpzZGHK4MFCIcvCZjQUgcqUwuXttjZf0yAGCqIuY32g9RinVhbTQi16LsO/WsFya+cbal1t6HbJWjTIpvwThgNmDr2gbJ6SUuTzlbIY/smJycVjuz0zKyj3GgfDeoMX1QaDpSPPFMReVQSlBgfHZnwO85K757R1aEdn6yVAAipNCDTxrAE+bGeH5deHXWNG6Hx4hS702qiO63yKrHRnCyU6T2OTsQw637WAZT471avgX7gtAsYqQER3vUSyZW49+9Htsk4sKIBJKGYxgfxVrkS5WVzcxk/OdI+l59TTklbXqsG5pMrTaHaiNZpPaOwu6A4b02HvJVvEhGBJa1KQ2LZIV+FwgdBUyD1m0D2+AC6DGuruqxcImf3kkNMIm7ydYSYFES7jTRD5gw5Zg=
 before_install:
   - git clone https://github.com/LinuxAdeptLtd/Docker-Terraform.git ${TERRAFORM_BUILD}
-  - docker build -t terraform -f ${TERRAFORM_BUILD}/Dockerfile .
+  - docker build -t terraform-build -f ${TERRAFORM_BUILD}/Dockerfile .
   - ls -alh ${TRAVIS_BUILD_DIR}/terraform
   - ls -alh $(pwd)
-  - docker run --rm -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform:/data terraform init
+  - docker run --rm -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform:/data terraform-build init
 script:
-  - docker run --rm -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform:/data terraform workspace select production
-  - docker run --rm -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform:/data terraform apply -auto-approve -refresh=true -var-file production.tfvars
+  - docker run --rm -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform:/data terraform-build workspace select production
+  - docker run --rm -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform:/data terraform-build apply -auto-approve -refresh=true -var-file production.tfvars
