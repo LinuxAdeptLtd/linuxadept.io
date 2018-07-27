@@ -1,15 +1,11 @@
 env:
-  matrix:
-    - TERRAFORM_BUILD=terraform_build
-    - secure: haSk8ya3weQYf5+3vxEQM1pYovdS4sLiPKIp4O8XHNCqBgtixWAC1fq+n+/pcCopAYwhvuM3MvB72B7GF36Ux3AU/d2xUeXi5jPVTYYZcXwrfzTS7JFMDZaktF0ISkhg9aV49ZUSfGztrQwzej03Sm7bn1ccZDK1G1wikZT8S9dQzIvH3xpemyB0sp1OkCjAQGRvoQpWLVTtyAvano7eIGpUc0CsVOim4FgB0FXD6XKkXvpVbY39JnnNN0XhG3TyWKmttrAJ1U5bM/93Tpam/3SpQFnqKcOSoxV+x9cy3sE5PmmnJOWU/2o/X0uCUImZsLIYTmOvFWWfa5yHQdC4OupdpdECgJwz64pxqD6DRuroQpPVCSUkWPCH/u1wPuDfzS2tMZqY4Py1whyMwb7gQSWVh+VmsrYByq7Im/E7jd/7ofomJDVSAbcfGjkYwYLKNeCU0gNrark9gC9q+xqnVAPdDyRmrS4t2+Zu3GVULc/6ALMIA7AggQWEIT7DFJFeVJpwsfHTd//7NyfNqU/ZlMvUjhRpO6xjJq4pR4zfrNWPDeAZdjzekIVS6DLr+ofaWjDaVBCnGpvji1jgTv07nuNEPjjS9uSC2PT8b5RX92d9hq4Jkohr1nKMrodzAPviv4QtwIsn37bjuYniZz1IM8/Rnoxfj73XzDGBxNb/1dM=
-    - secure: QAdW/aciq0mJXuJuVeZqBvUCRAR7cK9oeZ8C5SVQkxESsnzvCC7o5cX0+TjYyKFH2fVAm5eD6F1kv7uOm9HCP534hTpSPkXVaysdA9v4BV5E47Wt6zkPWhCwaNPcKA48vCnM9XK0DHbE5tV43VB4ZpDzg17AUy7sAkEtuzMQBz+g3ZzqGML/jfh8OncJ3mJdRa6wEDjwiDcqGwBC0VG7X3WDzJSXCKE01VFpAq5KBnLQiWbGLRx0bTYzGpXNSXBQ9xh78VHjiT0ufS8Xm+EO8u1hHY2qpzZGHK4MFCIcvCZjQUgcqUwuXttjZf0yAGCqIuY32g9RinVhbTQi16LsO/WsFya+cbal1t6HbJWjTIpvwThgNmDr2gbJ6SUuTzlbIY/smJycVjuz0zKyj3GgfDeoMX1QaDpSPPFMReVQSlBgfHZnwO85K757R1aEdn6yVAAipNCDTxrAE+bGeH5deHXWNG6Hx4hS702qiO63yKrHRnCyU6T2OTsQw637WAZT471avgX7gtAsYqQER3vUSyZW49+9Htsk4sKIBJKGYxgfxVrkS5WVzcxk/OdI+l59TTklbXqsG5pMrTaHaiNZpPaOwu6A4b02HvJVvEhGBJa1KQ2LZIV+FwgdBUyD1m0D2+AC6DGuruqxcImf3kkNMIm7ydYSYFES7jTRD5gw5Zg=
+  - TERRAFORM_BUILD=terraform_build
+  - secure: haSk8ya3weQYf5+3vxEQM1pYovdS4sLiPKIp4O8XHNCqBgtixWAC1fq+n+/pcCopAYwhvuM3MvB72B7GF36Ux3AU/d2xUeXi5jPVTYYZcXwrfzTS7JFMDZaktF0ISkhg9aV49ZUSfGztrQwzej03Sm7bn1ccZDK1G1wikZT8S9dQzIvH3xpemyB0sp1OkCjAQGRvoQpWLVTtyAvano7eIGpUc0CsVOim4FgB0FXD6XKkXvpVbY39JnnNN0XhG3TyWKmttrAJ1U5bM/93Tpam/3SpQFnqKcOSoxV+x9cy3sE5PmmnJOWU/2o/X0uCUImZsLIYTmOvFWWfa5yHQdC4OupdpdECgJwz64pxqD6DRuroQpPVCSUkWPCH/u1wPuDfzS2tMZqY4Py1whyMwb7gQSWVh+VmsrYByq7Im/E7jd/7ofomJDVSAbcfGjkYwYLKNeCU0gNrark9gC9q+xqnVAPdDyRmrS4t2+Zu3GVULc/6ALMIA7AggQWEIT7DFJFeVJpwsfHTd//7NyfNqU/ZlMvUjhRpO6xjJq4pR4zfrNWPDeAZdjzekIVS6DLr+ofaWjDaVBCnGpvji1jgTv07nuNEPjjS9uSC2PT8b5RX92d9hq4Jkohr1nKMrodzAPviv4QtwIsn37bjuYniZz1IM8/Rnoxfj73XzDGBxNb/1dM=
+  - secure: QAdW/aciq0mJXuJuVeZqBvUCRAR7cK9oeZ8C5SVQkxESsnzvCC7o5cX0+TjYyKFH2fVAm5eD6F1kv7uOm9HCP534hTpSPkXVaysdA9v4BV5E47Wt6zkPWhCwaNPcKA48vCnM9XK0DHbE5tV43VB4ZpDzg17AUy7sAkEtuzMQBz+g3ZzqGML/jfh8OncJ3mJdRa6wEDjwiDcqGwBC0VG7X3WDzJSXCKE01VFpAq5KBnLQiWbGLRx0bTYzGpXNSXBQ9xh78VHjiT0ufS8Xm+EO8u1hHY2qpzZGHK4MFCIcvCZjQUgcqUwuXttjZf0yAGCqIuY32g9RinVhbTQi16LsO/WsFya+cbal1t6HbJWjTIpvwThgNmDr2gbJ6SUuTzlbIY/smJycVjuz0zKyj3GgfDeoMX1QaDpSPPFMReVQSlBgfHZnwO85K757R1aEdn6yVAAipNCDTxrAE+bGeH5deHXWNG6Hx4hS702qiO63yKrHRnCyU6T2OTsQw637WAZT471avgX7gtAsYqQER3vUSyZW49+9Htsk4sKIBJKGYxgfxVrkS5WVzcxk/OdI+l59TTklbXqsG5pMrTaHaiNZpPaOwu6A4b02HvJVvEhGBJa1KQ2LZIV+FwgdBUyD1m0D2+AC6DGuruqxcImf3kkNMIm7ydYSYFES7jTRD5gw5Zg=
 before_install:
   - git clone https://github.com/LinuxAdeptLtd/Docker-Terraform.git ${TERRAFORM_BUILD}
-  - docker build -t terraform-build -f ${TERRAFORM_BUILD}/Dockerfile .
-  - ls -alh ${TRAVIS_BUILD_DIR}/terraform
-  - ls -alh $(pwd)
-  - docker run --rm -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform:/data -ti --entrypoint "/bin/ls" terraform-build
-  - docker run --rm -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform:/data terraform-build init
+  - docker build -t terraform -f ${TERRAFORM_BUILD}/Dockerfile .
+  - docker run --rm -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform:/data terraform init
 script:
-  - docker run --rm -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform:/data terraform-build workspace select production
-  - docker run --rm -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform:/data terraform-build apply -auto-approve -refresh=true -var-file production.tfvars
+  - docker run --rm -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform:/data terraform workspace select production
+  - docker run --rm -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -v $(pwd)/terraform:/data terraform apply -auto-approve -refresh=true -var-file production.tfvars
