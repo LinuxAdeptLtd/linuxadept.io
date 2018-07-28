@@ -7,3 +7,6 @@
 
 # Crash log files
 crash.log
+
+# ruby gem cache
+**/vendor/bundle/**
