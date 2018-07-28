@@ -1,3 +1,6 @@
+services:
+  - docker
+
 env:
   global:
     - TERRAFORM_BUILD=terraform_build
