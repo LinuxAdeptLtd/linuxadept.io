@@ -10,3 +10,9 @@ crash.log
 
 # ruby gem cache
 **/vendor/bundle/**
+
+# jekyll
+site/_site
+site/.sass-cache/
+site/.jekyll-cache/
+site/.jekyll-metadata
