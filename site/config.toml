@@ -1,3 +1,12 @@
-baseURL = "http://example.org/"
+baseURL = "http://linuxadept.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Linux Adept"
+theme = "beautifulhugo"
+
+enableGitInfo = true
+enableRobotsTXT = true
+
+sectionPagesMenu = "main"
+
+pygmentsCodeFences = true
+pygmentsUseClasses = true
